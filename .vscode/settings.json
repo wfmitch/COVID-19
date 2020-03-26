@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "c:\\Users\\wfmit\\OneDrive\\Documents\\GitHub\\COVID-19\\venv\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\wfmit\\OneDrive\\Documents\\GitHub\\COVID-19\\venv\\Scripts\\python.exe",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }
