@@ -1,1 +1,8 @@
 matplotlib
+
+
+NumPy >= 1.11
+cycler >= 0.10.0
+dateutil >= 2.1
+kiwisolver >= 1.0.0
+pyparsing
