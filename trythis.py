@@ -1,6 +1,7 @@
 import os
 import sys
 from datetime import datetime
+import dateparser
 import logging
 import csv
 import numpy as np
@@ -18,20 +19,21 @@ with open('csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_co
     for row in reader:
         if row[1] == 'US':
             for days in range(4,len(dates)-1):
-                if row[days] == '': row[days]=0
                 totals[days] = totals[days] + int(row[days])
 for days in range(4,len(dates)-1):
     log_totals[days] = math.log(totals[days]) 
+for days in range(4,len(dates)-1):
+    true_dates[days] = dateparser.parse(dates[days])   
 plt.figure()
 plt.suptitle('US Confirmed Cases vs Log of Confirmed Cases')
 plt.xlabel('time (days)')
 plt.ylabel('Cases')
 plt.subplot(211)
 plt.title('Confirmed Cases')
-plt.plot(dates[4:len(dates)-1],totals[4:len(dates)-1])
+plt.plot(dates[4:len(dates)-1],totals[4:len(dates)])
 plt.subplot(212)
 plt.title('Log of Confirmed Cases')
-plt.plot(dates[4:len(dates)-1],log_totals[4:len(dates)-1])
+plt.plot(dates[4:len(dates)-1],log_totals[4:len(dates)])
 
 
 plt.show()
