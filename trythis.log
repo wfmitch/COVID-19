@@ -771,3 +771,4 @@
 03/31/2020 11:32:50 AM findfont: score(<Font 'Engravers MT' (ENGR.TTF) normal normal 400 normal>) = 10.05
 03/31/2020 11:32:50 AM findfont: score(<Font 'Mistral' (MISTRAL.TTF) normal normal 400 normal>) = 10.05
 03/31/2020 11:32:50 AM findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\wfmit\\OneDrive\\Documents\\GitHub\\COVID-19\\.venv\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
+03/31/2020 11:35:38 AM Program Finished

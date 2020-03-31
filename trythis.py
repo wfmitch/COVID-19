@@ -20,8 +20,6 @@ with open('csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_co
         if row[1] == 'US':
             for days in range(4,len(dates)):
                 totals[days-4] = totals[days-4] + int(row[days])
-logging.info(len(true_dates))
-logging.info(len(totals))
 for days in range(4,len(dates)):
     log_totals[days-4] = math.log(totals[days-4])
 plt.figure()
