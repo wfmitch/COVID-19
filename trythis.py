@@ -2,6 +2,7 @@ import os,sys,dotenv,logging,dateparser,random,argparse
 from datetime import datetime
 
 import csv
+import requests
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -10,6 +11,8 @@ from _datetime import timedelta
 if __name__ == '__main__':
     logging.basicConfig(filename='trythis.log',filemode='w',format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.DEBUG)
     logging.info("Program Started")
+    response = requests.get('https://api.covid19data.cloud/')
+    response.json()
     with open('csse_covid_19_data\\csse_covid_19_time_series\\time_series_covid19_confirmed_global.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
         dates = next(reader)
