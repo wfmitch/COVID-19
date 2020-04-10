@@ -1,6 +1,7 @@
-04/09/2020 02:00:45 PM Program Started
-04/09/2020 02:00:45 PM 2020-04-08
-04/09/2020 02:00:45 PM 2020-04-09
-04/09/2020 02:00:45 PM Starting new HTTPS connection (1): api.covid19data.cloud:443
-04/09/2020 02:00:46 PM https://api.covid19data.cloud:443 "GET /v1/jh/daily-reports/?last_update_from=2020-04-08&last_update_to=2020-04-09&country=US HTTP/1.1" 200 None
-04/09/2020 02:00:46 PM Program Finished
+04/10/2020 09:43:05 AM Program Started
+04/10/2020 09:43:05 AM 2020-04-10
+04/10/2020 09:43:05 AM 2020-04-09
+04/10/2020 09:43:05 AM Starting new HTTPS connection (1): api.covid19data.cloud:443
+04/10/2020 09:43:06 AM https://api.covid19data.cloud:443 "GET /v1/jh/daily-reports/?last_update_from=2020-04-09&last_update_to=2020-04-10&country=US HTTP/1.1" 200 None
+04/10/2020 09:43:06 AM <Response [200]>
+04/10/2020 09:43:06 AM Program Finished

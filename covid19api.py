@@ -1,4 +1,4 @@
-import os,sys,dotenv,logging,dateparser,random,argparse,json
+import os,sys,dotenv,logging,dateparser,random,argparse,json,pprint
 from datetime import date
 from datetime import timedelta
 
@@ -13,12 +13,25 @@ if __name__ == '__main__':
     logging.info("Program Started")
     last_date = date.today()
     start_date = last_date - timedelta(1)
-    logging.info(start_date.isoformat())    
-    logging.info(last_date.isoformat()) 
+    logging.info(last_date) 
+    logging.info(start_date)       
 
     r = requests.get('https://api.covid19data.cloud/v1/jh/daily-reports/?last_update_from='+str(start_date)+'&last_update_to='+str(last_date)+'&country=US')
-
+    logging.info(r)
+    if r.status_code != 200:
+        sys.exit(422)
+    count = 0
+    total_deaths = 0
+    total_confirmed = 0
+    total_recovered = 0
+    for d in r.json():
+        total_deaths = total_deaths + d["deaths"]
+        total_confirmed = total_confirmed + d["confirmed"]
+        total_recovered = total_recovered + d["recovered"]
+        count = count + 1
     print(r.json())
+    print(count,total_confirmed,total_deaths,total_recovered)
+    
 
     #  dates = next(reader)
     #     totals = np.zeros(len(dates)-4) 
