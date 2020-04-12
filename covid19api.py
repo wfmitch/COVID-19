@@ -1,4 +1,4 @@
-import os,sys,dotenv,logging,dateparser,random,argparse,json,pprint
+import os,sys,dotenv,logging,dateparser,random,argparse,json,pprint,sqlite3,sqlalchemy 
 from datetime import date
 from datetime import timedelta
 
@@ -14,8 +14,7 @@ if __name__ == '__main__':
     last_date = date.today()
     start_date = last_date - timedelta(1)
     logging.info(last_date) 
-    logging.info(start_date)       
-
+    logging.info(start_date)
     r = requests.get('https://api.covid19data.cloud/v1/jh/daily-reports/?last_update_from='+str(start_date)+'&last_update_to='+str(last_date)+'&country=US')
     logging.info(r)
     if r.status_code != 200:
