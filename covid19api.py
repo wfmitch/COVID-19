@@ -15,7 +15,8 @@ if __name__ == '__main__':
     start_date = last_date - timedelta(1)
     logging.info(last_date) 
     logging.info(start_date)
-    r = requests.get('https://api.covid19data.cloud/v1/jh/daily-reports/?last_update_from='+str(start_date)+'&last_update_to='+str(last_date)+'&country=US')
+    r = requests.get('https://coviddata.github.io/coviddata/v1/countries/stats.json')
+    # r = requests.get('https://api.covid19data.cloud/v1/jh/daily-reports/?last_update_from='+str(start_date)+'&last_update_to='+str(last_date)+'&country=US')
     logging.info(r)
     if r.status_code != 200:
         sys.exit(422)

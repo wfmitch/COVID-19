@@ -1,11 +1,7 @@
-import os,sys,dotenv,logging,dateparser,random,argparse
+import os,sys,dotenv,logging,dateparser,random,argparse,pathlib2,csv,requests,math 
 from datetime import datetime
-
-import csv
-import requests
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 from _datetime import timedelta
 
 if __name__ == '__main__':
